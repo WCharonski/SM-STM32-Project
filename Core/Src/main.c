@@ -114,7 +114,7 @@ void HAL_UART_RxCpltCallback (UART_HandleTypeDef *huart)
 	{
 		TempRef=(atof(&Received));
 		LCD_SetCursor(&hlcd1, 1, 0);
-		LCD_printf(&hlcd1, "Temp set %4.2f", TempRef);
+		LCD_printf(&hlcd1, "Set %4.2f[degC]", TempRef);
 		lcd_delay_us(&hlcd1, 1000000);
 		LCD_Clear(&hlcd1);
 	}
