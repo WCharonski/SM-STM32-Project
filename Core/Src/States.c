@@ -67,9 +67,9 @@ void States_Change (double TempRef, double temp)
 
 void States_Run()
 {
-	HAL_GPIO_WritePin(Heater_GPIO_Port, Heater_Pin, heater_state);  // Heater control
+	HAL_GPIO_WritePin(Heater_GPIO_Port, Heater_Pin, heater_state);  	// Heater control
 	HAL_GPIO_WritePin(Fan_GPIO_Port, Fan_Pin, fan_state);			// Fan control
-	HAL_GPIO_WritePin(LD1EX_GPIO_Port, LD1EX_Pin, ld1ex_state);		//
+	HAL_GPIO_WritePin(LD1EX_GPIO_Port, LD1EX_Pin, ld1ex_state);		// Control system insensitivity LED control
 	HAL_GPIO_WritePin(LD2EX_GPIO_Port, LD2EX_Pin, ld2ex_state);		// Fan LED control
 	HAL_GPIO_WritePin(LD3EX_GPIO_Port, LD3EX_Pin, ld3ex_state);		// Heater LED control
 }
